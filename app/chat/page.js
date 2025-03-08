@@ -5,7 +5,7 @@ export default function Home() {
 
 
         <div>
-            <Chatbot />
+            < Chatbot />
         </div>
     );
 }

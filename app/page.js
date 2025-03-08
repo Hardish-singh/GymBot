@@ -4,7 +4,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; // Icons for menu
-
+import {Chatbot} from "../components/Chatbot"; 
 
 export default function Home() {
   const [chatOpen, setChatOpen] = useState(false);
