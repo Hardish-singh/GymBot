@@ -1,9 +1,10 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; // Icons for menu
-// import Chatbot from "@/components/Chatbot";
+
 
 export default function Home() {
   const [chatOpen, setChatOpen] = useState(false);
@@ -36,10 +37,12 @@ export default function Home() {
         <nav className=" text-white py-4 px-6">
       <ul className="flex justify-end space-x-6">
         <li>
-          <Link href="/chat" className="hover:text-yellow-400 transition">  <img 
+          <Link href="/chat" className="hover:text-yellow-400 transition">  <Image 
       src="/ch.jpg" 
       alt="Gym Training" 
-      className=" w-11"
+      width={44}  // Set an appropriate width
+      height={44} // Set an appropriate height
+      className="w-11" 
     /></Link>
         </li>
         <li>
@@ -74,12 +77,14 @@ export default function Home() {
 
   {/* Right Side - Image */}
   <div className="md:w-1/2 flex justify-center">
-    <img 
-      src="/it.webp" 
-      alt="Gym Training" 
-      className="w-full md:w-3/4 rounded-lg shadow-lg"
-    />
-  </div>
+  <Image
+    src="/it.webp"
+    alt="Gym Training"
+    width={500}  // Set an appropriate width
+    height={300} // Set an appropriate height
+    className="w-full md:w-3/4 rounded-lg shadow-lg"
+  />
+</div>
 </header>
 
 
@@ -87,12 +92,14 @@ export default function Home() {
       <section id="services" className="flex flex-col md:flex-row items-center justify-between p-10  text-white">
   {/* Left Side - Image */}
   <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
-    <img 
-      src="/ut.webp" // Replace with actual image path
-      alt="Gym Services"
-      className="w-full max-w-md rounded-lg shadow-lg"
-    />
-  </div>
+  <Image
+    src="/ut.webp"  // Ensure this path is correct
+    alt="Gym Services"
+    width={500}  // Set an appropriate width
+    height={300} // Set an appropriate height
+    className="w-full max-w-md rounded-lg shadow-lg"
+  />
+</div>
 
   {/* Right Side - Text Content */}
   <div className="md:w-1/2 text-left md:pl-10">
@@ -132,12 +139,14 @@ export default function Home() {
 
   {/* Right Side - Image */}
   <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
-    <img 
-      src="/gym.webp" // Replace with actual image path
-      alt="Pricing Plans"
-      className="w-full max-w-md rounded-lg shadow-lg"
-    />
-  </div>
+  <Image
+    src="/gym.webp"  // Ensure this image exists in the public folder
+    alt="Pricing Plans"
+    width={500}  // Set an appropriate width
+    height={300} // Set an appropriate height
+    className="rounded-lg shadow-lg"
+  />
+</div>
 </section>
 
 
