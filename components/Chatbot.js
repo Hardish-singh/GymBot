@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState("Hi");
   const chatEndRef = useRef(null);
 
   const sendMessage = async () => {
