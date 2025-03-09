@@ -40,7 +40,7 @@ const Chatbot = () => {
     setInput("");
   };
 
-  // Auto-scroll to the latest message
+
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
@@ -48,13 +48,12 @@ const Chatbot = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="bg-white shadow-xl rounded-lg w-[600px] h-[700px] flex flex-col">
-        {/* Robot GIF Header */}
+        
         <div className="bg-blue-600 text-white p-5 flex items-center justify-center rounded-t-lg">
-          {/* <Image src="/robot.gif" alt="Chatbot" width={50} height={50} /> */}
           <h3 className="text-xl font-semibold ml-3">Gym bot</h3>
         </div>
 
-        {/* Chat Messages */}
+     
         <div className="flex-1 p-5 overflow-y-auto bg-gray-100 space-y-3">
           {messages.map((msg, index) => (
             <div
@@ -71,7 +70,7 @@ const Chatbot = () => {
           <div ref={chatEndRef} />
         </div>
 
-        {/* Input Field & Send Button */}
+        
         <div className="p-4 bg-white border-t flex items-center">
           <input
             type="text"

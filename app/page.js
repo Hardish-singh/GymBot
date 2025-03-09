@@ -18,20 +18,20 @@ export default function Home() {
         <meta name="description" content="Best Gym in Town" />
       </Head>
 
-      {/* Navbar */}
+     
       <nav className="p-5 bg-gray-800 flex justify-between items-center">
         <h1 className="text-xl font-bold">BALAJI FITNESS</h1>
 
-        {/* Mobile Menu */}
+       
         <div className="md:hidden">
           <button onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {/* Desktop Menu */}
+       
         <div className={`absolute md:static top-16 right-5 bg-gray-800 md:bg-transparent p-5 md:p-0 md:flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-5 shadow-lg md:shadow-none rounded-lg md:rounded-none transition-all ${menuOpen ? "block" : "hidden md:flex"}`}>
-        {/* import Link from "next/link"; */}
+      
 
         
         <nav className=" text-white py-4 px-6">
@@ -40,8 +40,8 @@ export default function Home() {
           <Link href="/chat" className="hover:text-yellow-400 transition">  <Image 
       src="/ch.jpg" 
       alt="Gym Training" 
-      width={44}  // Set an appropriate width
-      height={44} // Set an appropriate height
+      width={44} 
+      height={44} 
       className="w-11" 
     /></Link>
         </li>
@@ -60,9 +60,9 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
+      
       <header className="flex flex-col md:flex-row items-center justify-between py-24 px-8 bg-gradient-to-r via-gray-800 to-gray-900 text-white">
-  {/* Left Side - Text Content */}
+
   <div className="md:w-1/2 text-left">
     <h2 className="text-4xl md:text-6xl font-extrabold">
       Achieve Your Fitness Goals
@@ -75,33 +75,33 @@ export default function Home() {
     </button>
   </div>
 
-  {/* Right Side - Image */}
+ 
   <div className="md:w-1/2 flex justify-center">
   <Image
     src="/it.webp"
     alt="Gym Training"
-    width={500}  // Set an appropriate width
-    height={300} // Set an appropriate height
+    width={500}  
+    height={300} 
     className="w-full md:w-3/4 rounded-lg shadow-lg"
   />
 </div>
 </header>
 
 
-      {/* Services Section */}
+      
       <section id="services" className="flex flex-col md:flex-row items-center justify-between p-10  text-white">
-  {/* Left Side - Image */}
+ 
   <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
   <Image
-    src="/ut.webp"  // Ensure this path is correct
+    src="/ut.webp" 
     alt="Gym Services"
-    width={500}  // Set an appropriate width
-    height={300} // Set an appropriate height
+    width={500}  
+    height={300}
     className="w-full max-w-md rounded-lg shadow-lg"
   />
 </div>
 
-  {/* Right Side - Text Content */}
+ 
   <div className="md:w-1/2 text-left md:pl-10">
     <h3 className="text-3xl md:text-5xl font-bold">
       Our Services
@@ -121,9 +121,9 @@ export default function Home() {
   </div>
 </section>
 
-      {/* Pricing Section */}
+     
       <section id="pricing" className="flex flex-col md:flex-row items-center justify-between py-24 px-8 bg-gradient-to-r via-gray-800 to-gray-900 text-white">
-  {/* Left Side - Text Content */}
+ 
   <div className="md:w-1/2 text-left md:pr-10">
     <h3 className="text-3xl md:text-5xl font-bold">Pricing Plans</h3>
     <p className="mt-4 text-lg">Choose the perfect plan that fits your fitness journey.</p>
@@ -137,27 +137,27 @@ export default function Home() {
     </button>
   </div>
 
-  {/* Right Side - Image */}
+ 
   <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
   <Image
-    src="/gym.webp"  // Ensure this image exists in the public folder
+    src="/gym.webp"  
     alt="Pricing Plans"
-    width={500}  // Set an appropriate width
-    height={300} // Set an appropriate height
+    width={500}  
+    height={300}
     className="rounded-lg shadow-lg"
   />
 </div>
 </section>
 
 
-      {/* Contact Section */}
+      
       <section id="contact" className="p-10 text-center">
         <h3 className="text-3xl font-bold">Contact Us</h3>
         <p>Email: info@balajifitness.com | Phone: 0000000000</p>
         <p>All rights reserved @Hardish </p>
       </section>
 
-      {/* Chatbot Button */}
+      
       <div className="fixed bottom-5 right-5">
       <Link href="/chat">
           <button className="bg-blue-600 p-3 rounded-full shadow-lg hover:bg-blue-500 transition">
@@ -166,7 +166,7 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* Chatbot Box */}
+      
       {chatOpen && (
          <div className="min-h-screen flex items-center justify-center bg-gray-100">
          <h1 className="text-4xl font-bold">Welcome to Gym Elite</h1>

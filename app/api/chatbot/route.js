@@ -1,14 +1,14 @@
 export async function POST(req) {
     try {
         const { message } = await req.json();
-        const botResponse = getBotResponse(message);
+        const botResponse = BotResponse(message);
         return Response.json({ response: botResponse });
     } catch (error) {
         return Response.json({ error: "Internal Server Error" }, { status: 500 });
     }
 }
 
-function getBotResponse(input) {
+function BotResponse(input) {
     input = input.toLowerCase();
     if (/\b(hello|hi)\b/.test(input)) {
         return "Hello! How can I help you today?";
